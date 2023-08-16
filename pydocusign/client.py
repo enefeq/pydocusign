@@ -221,7 +221,6 @@ class DocuSignClient(object):
             load_pem_private_key(private_key.encode('utf8'), password=None),
             algorithm='RS256'
         )
-        logger.debug("Requesting new Docusign access token")
         response = requests.post(
             # The base url for OAuth2 is different than the base url for the REST API
             f"{self.base_url}/oauth/token",
