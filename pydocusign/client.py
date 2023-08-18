@@ -109,7 +109,7 @@ class DocuSignClient(object):
         self.timeout = timeout
 
         # Docusign JWT settings
-        self.private_key = private_key
+        self.private_key = private_key.strip() if private_key is not None else None
         self.user_id = user_id
         self.integration_key = integration_key
         self.audience = audience
